@@ -1,0 +1,1 @@
+json.extract! @reading, :id, :date, :string, :cold_water, :float, :central_heating, :float, :hot_water, :electricity, :float, :created_at, :updated_at

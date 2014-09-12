@@ -1,0 +1,19 @@
+<%= simple_form_for(@reading) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :date, label: 'Data' %>
+    <%= f.input :string %>
+    <%= f.input :cold_water %>
+    <%= f.input :float %>
+    <%= f.input :central_heating %>
+    <%= f.input :float %>
+    <%= f.input :hot_water %>
+    <%= f.input :electricity %>
+    <%= f.input :float %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

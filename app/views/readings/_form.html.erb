@@ -1,0 +1,19 @@
+<%= simple_form_for(@reading) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :date, label: 'Data' %>
+    <%= f.input :string, label: 'String' %>
+    <%= f.input :cold_water, label: 'Zimna woda' %>
+    <%= f.input :float, label: 'Odpływ' %>
+    <%= f.input :central_heating, label: 'Centralne ogrzewanie' %>
+    <%= f.input :float, label: 'Odpływ' %>
+    <%= f.input :hot_water, label: 'Cipła woda' %>
+    <%= f.input :electricity, label: 'Elektryka' %>
+    <%= f.input :float, label: 'Odpływ' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
