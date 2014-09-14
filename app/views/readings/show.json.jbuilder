@@ -1,1 +1,1 @@
-json.extract! @reading, :id, :data, :string, :zimna_woda, :odpływ, :centralne ogrzewanie, :odpływ, :ciepła_woda, :elektryka, :odpływ, :created_at, :updated_at
+json.extract! @reading, :id, :data, :zimna_woda, :centralne ogrzewanie, :ciepła_woda, :elektryka, :created_at, :updated_at

@@ -1,4 +1,0 @@
-json.array!(@readings) do |reading|
-  json.extract! reading, :id, :date, :string, :cold_water, :float, :central_heating, :float, :hot_water, :electricity, :float
-  json.url reading_url(reading, format: :json)
-end

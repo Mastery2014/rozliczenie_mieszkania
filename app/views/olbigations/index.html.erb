@@ -1,0 +1,47 @@
+<h1>Lista zobowiązań</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Opis</th>
+      <th>Klient</th>
+      <th>Zimna woda</th>
+      <th>Cena zimnej wody</th>
+      <th>Centralne ogrzewanie</th>
+      <th>Cena ogrzewania</th>
+      <th>Ciepła woda</th>
+      <th>Cena ciepłej wody</th>
+      <th>Elektryczność</th>
+      <th>Koszta elektryczności</th>
+      <th>Inne koszta</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @olbigations.each do |olbigation| %>
+      <tr>
+        <td><%= olbigation.date %></td>
+        <td><%= olbigation.description %></td>
+        <td><%= olbigation.client_id %></td>
+        <td><%= olbigation.cold_water %></td>
+        <td><%= olbigation.cold_water_price %></td>
+        <td><%= olbigation.cental_heating %></td>
+        <td><%= olbigation.central_heating_price %></td>
+        <td><%= olbigation.hot_water %></td>
+        <td><%= olbigation.hot_water_price %></td>
+        <td><%= olbigation.electricity %></td>
+        <td><%= olbigation.electricity_price %></td>
+        <td><%= olbigation.other_price %></td>
+        <td><%= link_to 'Pokaż', olbigation %></td>
+        <td><%= link_to 'Edytuj', edit_olbigation_path(olbigation) %></td>
+        <td><%= link_to 'Usuń', olbigation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nowe zobowiązania', new_olbigation_path %>

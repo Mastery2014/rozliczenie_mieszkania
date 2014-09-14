@@ -69,6 +69,6 @@ class ReadingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reading_params
-      params.require(:reading).permit(:date, :string, :cold_water, :float, :central_heating, :float, :hot_water, :electricity, :float)
+      params.require(:reading).permit(:read_at, :cold_water, :central_heating, :hot_water, :electricity)
     end
 end

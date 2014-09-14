@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @olbigation.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @olbigation.description %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @olbigation.client_id %>
+</p>
+
+<p>
+  <strong>Cold water:</strong>
+  <%= @olbigation.cold_water %>
+</p>
+
+<p>
+  <strong>Cold water price:</strong>
+  <%= @olbigation.cold_water_price %>
+</p>
+
+<p>
+  <strong>Cental heating:</strong>
+  <%= @olbigation.cental_heating %>
+</p>
+
+<p>
+  <strong>Central heating price:</strong>
+  <%= @olbigation.central_heating_price %>
+</p>
+
+<p>
+  <strong>Hot water:</strong>
+  <%= @olbigation.hot_water %>
+</p>
+
+<p>
+  <strong>Hot water price:</strong>
+  <%= @olbigation.hot_water_price %>
+</p>
+
+<p>
+  <strong>Electricity:</strong>
+  <%= @olbigation.electricity %>
+</p>
+
+<p>
+  <strong>Electricity price:</strong>
+  <%= @olbigation.electricity_price %>
+</p>
+
+<p>
+  <strong>Other price:</strong>
+  <%= @olbigation.other_price %>
+</p>
+
+<%= link_to 'Edytuj', edit_olbigation_path(@olbigation) %> |
+<%= link_to 'Powrót', olbigations_path %>

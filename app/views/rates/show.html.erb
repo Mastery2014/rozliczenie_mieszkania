@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Valid from:</strong>
+  <%= @rate.valid_from %>
+</p>
+
+<p>
+  <strong>Cold water:</strong>
+  <%= @rate.cold_water %>
+</p>
+
+<p>
+  <strong>Central heating:</strong>
+  <%= @rate.central_heating %>
+</p>
+
+<p>
+  <strong>Hot water:</strong>
+  <%= @rate.hot_water %>
+</p>
+
+<p>
+  <strong>Electricity:</strong>
+  <%= @rate.electricity %>
+</p>
+
+<%= link_to 'Edytuj', edit_rate_path(@rate) %> |
+<%= link_to 'Powrót', rates_path %>

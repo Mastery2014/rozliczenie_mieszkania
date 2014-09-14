@@ -1,0 +1,22 @@
+<%= simple_form_for(@olbigation) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :date, label: 'Data' %>
+    <%= f.input :description, label: 'Opis'  %>
+    <%= f.input :client_id, label: 'Klient'  %>
+    <%= f.input :cold_water, label: 'Zimna woda'  %>
+    <%= f.input :cold_water_price, label: 'Cena zimnej wody'  %>
+    <%= f.input :cental_heating, label: 'Centralne ogrzewanie'  %>
+    <%= f.input :central_heating_price, label: 'Cena ogrzewania'  %>
+    <%= f.input :hot_water, label: 'Ciepła woda'  %>
+    <%= f.input :hot_water_price, label: 'Cena ciepłej wody'  %>
+    <%= f.input :electricity, label: 'Elektryczność'  %>
+    <%= f.input :electricity_price, label: 'Koszta elektryczności'  %>
+    <%= f.input :other_price, label: 'Inne koszta'  %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

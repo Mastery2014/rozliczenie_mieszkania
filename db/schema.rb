@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912172351) do
+ActiveRecord::Schema.define(version: 20140914150645) do
 
   create_table "clients", force: true do |t|
     t.string   "name"
@@ -24,14 +24,47 @@ ActiveRecord::Schema.define(version: 20140912172351) do
     t.datetime "updated_at"
   end
 
-  create_table "readings", force: true do |t|
+  create_table "olbigations", force: true do |t|
     t.string   "date"
-    t.string   "string"
-    t.string   "cold_water"
-    t.string   "float"
-    t.string   "central_heating"
+    t.text     "description"
+    t.integer  "client_id"
+    t.float    "cold_water"
+    t.float    "cold_water_price"
+    t.float    "cental_heating"
+    t.float    "central_heating_price"
     t.float    "hot_water"
-    t.string   "electricity"
+    t.float    "hot_water_price"
+    t.float    "electricity"
+    t.float    "electricity_price"
+    t.float    "other_price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payments", force: true do |t|
+    t.string   "date"
+    t.float    "amount"
+    t.integer  "client_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "rates", force: true do |t|
+    t.date     "valid_from"
+    t.float    "cold_water"
+    t.float    "central_heating"
+    t.float    "hot_water"
+    t.float    "electricity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "readings", force: true do |t|
+    t.date     "read_at"
+    t.float    "cold_water"
+    t.float    "central_heating"
+    t.float    "hot_water"
+    t.float    "electricity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

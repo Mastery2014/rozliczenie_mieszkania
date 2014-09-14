@@ -2,33 +2,22 @@
 
 <p>
   <strong>Data:</strong>
-  <%= @reading.date %>
+  <%= @reading.read_at %>
 </p>
 
-<p>
-  <strong>String:</strong>
-  <%= @reading.string %>
-</p>
 
 <p>
   <strong>Zimna Woda:</strong>
   <%= @reading.cold_water %>
 </p>
 
-<p>
-  <strong>Odpływ:</strong>
-  <%= @reading.float %>
-</p>
 
 <p>
   <strong>Centralne ogrzewanie:</strong>
   <%= @reading.central_heating %>
 </p>
 
-<p>
-  <strong>Odpływ:</strong>
-  <%= @reading.float %>
-</p>
+
 
 <p>
   <strong>Ciepła woda:</strong>
@@ -40,10 +29,7 @@
   <%= @reading.electricity %>
 </p>
 
-<p>
-  <strong>Float:</strong>
-  <%= @reading.float %>
-</p>
+
 
 <%= link_to 'Edytuj', edit_reading_path(@reading) %> |
 <%= link_to 'Cofnij', readings_path %>

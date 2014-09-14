@@ -1,12 +1,11 @@
-class CreateReadings < ActiveRecord::Migration
+class CreateRates < ActiveRecord::Migration
   def change
-    create_table :readings do |t|
-      t.date :read_at
+    create_table :rates do |t|
+      t.date :valid_from
       t.float :cold_water
       t.float :central_heating
       t.float :hot_water
       t.float :electricity
-     
 
       t.timestamps
     end

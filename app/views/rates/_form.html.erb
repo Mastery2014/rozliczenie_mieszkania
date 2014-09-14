@@ -1,0 +1,15 @@
+<%= simple_form_for(@rate) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :valid_from, label: 'Ważne od' %>
+    <%= f.input :cold_water, label: 'Zimna woda' %>
+    <%= f.input :central_heating, label: 'Centralne ogrzewanie' %>
+    <%= f.input :hot_water, label: 'Ciepła woda' %>
+    <%= f.input :electricity, label: 'Elektryczność' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
